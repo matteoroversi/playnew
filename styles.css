@@ -27,15 +27,15 @@ html, body {
     flex-direction: column;
 }
 
-/* Heading style */
+/* Heading style with Instrument Serif font */
 h1 {
-    font-family: 'Instrument Serif', serif; /* Font for the h1 */
+    font-family: 'Instrument Serif', serif; /* Apply Instrument Serif to h1 */
     font-size: 12rem; /* Large font size for title */
     font-weight: 300; /* Light weight */
     margin-bottom: 20px;
 }
 
-/* Paragraph that will contain the phrases or the prank link */
+/* Paragraph text with Instrument Sans */
 p {
     font-family: 'Instrument Sans', sans-serif;
     font-size: 1.5rem;
