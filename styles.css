@@ -27,25 +27,30 @@ html, body {
     flex-direction: column;
 }
 
-/* Heading style with Instrument Serif and fallback font */
+/* Heading (h1) style with Instrument Serif and fallback font */
 h1 {
     font-family: 'Instrument Serif', 'Times New Roman', serif; /* Instrument Serif with Times fallback */
-    font-size: 12rem; /* Large font size for title */
+    font-size: 14rem; /* Large font size for title */
     font-weight: 300; /* Light weight */
     margin-bottom: 20px;
 }
 
-/* Paragraph text with Instrument Sans and fallback font */
+/* Paragraph (p) text style with Instrument Sans and fallback font */
 p {
     font-family: 'Instrument Sans', Arial, sans-serif; /* Instrument Sans with Arial fallback */
-    font-size: 1.5rem;
+    font-size: 2rem; /* Increased font size */
+    opacity: 0; /* Initial opacity set to 0 for smooth dissolve */
+    animation: fadeIn 1s ease-out forwards; /* Smooth fade-in animation */
 }
 
-/* Fade-in animation for <p> text */
-.fade-in {
-    animation: fadeIn 0.5s ease-out forwards;
+/* Safari-specific fallback for Instrument Serif */
+@supports (-webkit-touch-callout: none) {
+    h1 {
+        font-family: 'Times New Roman', serif; /* Safari fallback if Instrument Serif doesn't load */
+    }
 }
 
+/* Keyframes for the smooth fade-in effect */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -55,11 +60,11 @@ p {
     }
 }
 
-/* Styling for the prank link */
+/* Styling for the prank link (if any) */
 #prank-link {
     color: black; /* Black default color */
     text-decoration: underline; /* Underline the link */
-    font-weight: normal; /* Normal weight (not bold) */
+    font-weight: normal; /* Normal weight */
 }
 
 /* Hover state for the prank link */
@@ -100,19 +105,20 @@ p {
     cursor: pointer;
     font-family: 'Instrument Sans', Arial, sans-serif; /* Instrument Sans with Arial fallback */
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
 }
 
-/* Button hover effect */
+/* Button hover effect with black background and white text */
 .refresh-button:hover {
-    background-color: #d3d3d3;
+    background-color: black; /* Change background to black */
+    color: white; /* Change text to white */
 }
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
     /* Further reduce heading size on smaller screens */
     h1 {
-        font-size: 6rem; /* Smaller font size for mobile */
+        font-size: 5rem; /* Even smaller font size for mobile */
     }
 
     /* Reduce the font size for the phrases on smaller screens and add margin */
