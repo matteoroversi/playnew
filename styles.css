@@ -1,0 +1,140 @@
+/* General reset for margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full page height setup */
+html, body {
+    height: 100%;
+    font-family: 'Instrument Sans', sans-serif; /* Default font for body */
+    background-color: #fafafa; /* Page background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Centered content styling */
+.centered-content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Heading style */
+h1 {
+    font-family: 'Instrument Serif', serif; /* Font for the h1 */
+    font-size: 12rem; /* Large font size for title */
+    font-weight: 300; /* Light weight */
+    margin-bottom: 20px;
+}
+
+/* Paragraph that will contain the phrases or the prank link */
+p {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* Fade-in animation for <p> text */
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Styling for the prank link */
+#prank-link {
+    color: black; /* Black default color */
+    text-decoration: underline; /* Underline the link */
+    font-weight: normal; /* Normal weight (not bold) */
+}
+
+/* Hover state for the prank link */
+#prank-link:hover {
+    color: grey; /* Grey color on hover */
+}
+
+/* Emoji container for random emojis */
+#emoji-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Emojis shouldn't block interactions */
+    overflow: hidden;
+}
+
+/* Styling for the random emojis */
+.emoji {
+    position: absolute;
+    font-size: 5rem; /* Large emoji size */
+    will-change: transform, opacity; /* Optimize for animations */
+}
+
+/* Button styling for the "REFRESH FOR MORE" button */
+.refresh-button {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.refresh-button:hover {
+    background-color: #d3d3d3;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    /* Further reduce heading size on smaller screens */
+    h1 {
+        font-size: 6rem; /* Smaller font size for mobile */
+    }
+
+    /* Reduce the font size for the phrases on smaller screens and add margin */
+    p {
+        font-size: 1.3rem; /* Smaller paragraph text size */
+        margin-left: 20px; /* 20px margin on mobile */
+        margin-right: 20px; /* 20px margin on mobile */
+    }
+
+    /* Resize button on smaller screens */
+    .refresh-button {
+        font-size: 0.8rem; /* Smaller button text */
+        padding: 8px 16px; /* Adjust padding for smaller screen */
+        height: 42px; /* Specific height for mobile button */
+        width: calc(100% - 40px); /* Full width with some lateral margin */
+        left: unset;
+        transform: unset;
+        margin: 0 20px; /* Add lateral margin */
+    }
+
+    /* Reduce emoji size on mobile */
+    .emoji {
+        font-size: 3.5rem; /* Smaller emoji size for mobile */
+    }
+}
