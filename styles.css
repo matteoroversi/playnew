@@ -8,7 +8,7 @@
 /* Full page height setup */
 html, body {
     height: 100%;
-    font-family: 'Instrument Sans', sans-serif; /* Default font for body */
+    font-family: 'Instrument Sans', Arial, sans-serif; /* Default font for body with fallback */
     background-color: #fafafa; /* Page background */
     display: flex;
     justify-content: center;
@@ -27,17 +27,17 @@ html, body {
     flex-direction: column;
 }
 
-/* Heading style with Instrument Serif font */
+/* Heading style with Instrument Serif and fallback font */
 h1 {
-    font-family: 'Instrument Serif', serif; /* Apply Instrument Serif to h1 */
+    font-family: 'Instrument Serif', 'Times New Roman', serif; /* Instrument Serif with Times fallback */
     font-size: 12rem; /* Large font size for title */
     font-weight: 300; /* Light weight */
     margin-bottom: 20px;
 }
 
-/* Paragraph text with Instrument Sans */
+/* Paragraph text with Instrument Sans and fallback font */
 p {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Instrument Sans', Arial, sans-serif; /* Instrument Sans with Arial fallback */
     font-size: 1.5rem;
 }
 
@@ -98,7 +98,7 @@ p {
     border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Instrument Sans', Arial, sans-serif; /* Instrument Sans with Arial fallback */
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
